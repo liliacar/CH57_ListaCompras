@@ -24,7 +24,9 @@ if(Number(txtNumber.value)<=0){
 return true;
 }//validarCantidad
 
-
+function getPRecio(){
+    return Math.round(Math.random() *1000)/100;
+}//get precio
 
 btnAgregar.addEventListener("click", function(event){
 event.preventDefault();
@@ -50,6 +52,5 @@ alertValidaciones.style.display="block";
 if (txtNumber.value.length==0){
 
 }
-
-
 }); //btnAgregar listener
+
