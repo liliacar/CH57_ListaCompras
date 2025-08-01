@@ -143,3 +143,37 @@ cuerpoTabla.insertAdjacentHTML("beforeend", row);
 
 });//window load
 
+btnClear.addEventListener("click", function(event) {
+    event.preventDefault();
+    //1. eliminar el localStorage
+    localStorage.removeItem("datos");
+    localStorage.removeItem("resumen");
+//2. limpiar la tabla
+
+cuerpoTabla.innerHTML="";
+//3. limpiar los campos
+    txtName.value ="";
+    txtNumber.value = "";
+    txtName.focus();
+//4. limpiar el borde de los campos
+
+txtName.style.border="";
+txtNumber.style.border="";
+//5. limpiar los alerts
+alertValidacionesTexto.innerHTML="";
+alertValidaciones.style.display="none";
+
+//6. limpiar el resumen
+cont=0;
+totalEnProductosn = 0;
+costoTotal =0;
+contadorProductos.innerText=cont;
+productosTotal.innerText =totalEnProductos;
+precioTotal.innerText =new Intl.NumberFormat("es-MX", 
+   { style: "currency", currency: "MXN" }).format(costoTotal);
+datos = new Array();
+
+});//limpiar todo
+
+
+
