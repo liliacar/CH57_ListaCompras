@@ -145,7 +145,7 @@ cuerpoTabla.insertAdjacentHTML("beforeend", row);
 
 btnClear.addEventListener("click", function(event) {
     event.preventDefault();
-    //1. eliminar el localStorage
+//1. eliminar el localStorage
     localStorage.removeItem("datos");
     localStorage.removeItem("resumen");
 //2. limpiar la tabla
